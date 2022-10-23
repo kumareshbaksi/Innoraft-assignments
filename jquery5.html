@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+
+        p {
+            text-align: center;
+            color: white;
+            font-family: Arial;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .content_slidebar {
+            display: flex;
+            flex-grow: 1;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .header {
+            background-color: rgb(0, 115, 255);
+        }
+
+        .slidebar {
+            background-color: chocolate;
+            margin-right: 10px;
+            width: 25%;
+        }
+
+        .maincontent {
+            background-color: crimson;
+            height: 75%;
+
+
+        }
+
+        .subcontent {
+            background-color: violet;
+            height: 25%;
+            margin-top: 10px;
+        }
+
+        .footer {
+            background-color: yellowgreen;
+        }
+
+
+
+
+        .full-screen {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9); 
+        }
+
+
+        .text {
+            height: 100vh;
+            displaY: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .close-button{
+            float: right;
+        }
+
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <p>Header</p>
+        </div>
+        <div class="content_slidebar">
+            <div class="slidebar">
+                <p class="leftbar">Slidebar</p>
+            </div>
+            <div class="content">
+                <div class="maincontent">
+                    <p>Main content</p>
+                </div>
+                <div class="subcontent">
+                    <p>Extra content</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+
+    <div class="full-screen hidden">
+        <div class="btn">
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="text">
+            <p>I am popup</p>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    const popup = document.querySelector('.full-screen');
+    // 1
+    $(".header").click(function () {
+        $(".header").css("background-color", "black");
+    });
+    // 2
+    $(".slidebar").click(function () {
+        $(".leftbar").text("Leftbar");
+    });
+    //3
+    $(".subcontent").click(function () {
+        $(".maincontent").fadeOut();
+    });
+    $(".footer").click(function () {
+
+        popup.classList.remove('hidden');
+    });
+    $(".close-button").click(function () {
+
+        popup.classList.add('hidden');
+    });
+
+
+
+</script>
+
+</html>
