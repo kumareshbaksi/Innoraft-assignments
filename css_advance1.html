@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        span{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+        
+
+        .fas{
+            margin: 20px;
+        }
+
+        .logo{
+            margin-left: 50px;
+        }
+        ul{
+            list-style: none;
+        }
+        #home{
+            background-color: black;
+            padding: 10px;
+        }
+        
+
+        li{
+            display: inline-block;
+            margin-left: 15px;
+            margin-right: 50px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            height: 75px;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.709);
+        }
+
+        .banner{
+            height: 300px;
+            background-color: yellow;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .content{
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 50px;
+            display: flex;
+
+        }
+        .leftcontent{
+            width: 40%;
+            height: 100%;
+        }
+        .box1{
+            position: relative;
+            width: 50%;
+            height: 60%;
+            margin-top: 20px;
+            z-index: 1;
+            background-color: aqua;
+        }
+        .box2{
+                position: relative;
+                width: 90%;
+                height: 100%;
+                left: 36px;
+                top: -259px;
+                z-index: 0;
+                background-color: brown;
+        }
+        .rightcontent{
+            position: relative;
+            margin-left: 0.1px;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .maincontent{
+            height: 50%;
+            width: 100%;
+            background-color: blue;
+            margin-bottom: 10px;
+
+        }
+        .subcontent{
+            height: 50%;
+            width: 100%;
+            background-color: magenta;
+        }
+        form{
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+        footer{
+            margin-top: 10px;
+            height: 100px;
+            width: 100%;
+            background-color: rgb(0, 38, 255);
+        }
+        .footer_content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+        }
+        .footer_li{
+            display: inline;
+            border-left: 2px solid white;
+            padding-left: 50px;
+        }
+        .first { border-left: none; padding-left: 0; }
+
+    </style>
+</head>
+<body>
+    <header>
+            <img class="logo" src="skull.png" alt="logo" width="50" height="50">
+            <ul>
+                <li id="home"><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+    </header>
+    <div class="banner">
+        <i style='font-size:50px' class='fas' >&#8592;</i>
+        <h1>BANNER</h1>
+        <i style='font-size:50px' class='fas'>&#8594;</i>
+    </div>
+    <div class="content">
+        <div class="leftcontent">
+            <div class="box1">
+
+            </div>
+            <div class="box2">
+
+            </div>
+        </div>
+        <div class="rightcontent">
+            <div class="maincontent">
+                <form action="#">
+                    <span>First Name: </span><br>
+                    <input type="text" name="fname"><br>
+                    <span>Last Name: </span><br>
+                    <input type="text" name="lname"><br>
+                    <span>Choose car: </span><br>
+                    <select id="cars" name="carlist" form="carform">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                      </select><br> <br>    
+                    <input type="submit" >
+                </form>
+                
+            </div>
+            <div class="subcontent">
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_content">
+            <ul>
+                <li class="footer_li first"><a href="#">Home</a></li>
+                <li class="footer_li"><a href="#">Services</a></li>
+                <li class="footer_li"><a href="#">Profile</a></li>
+                <li class="footer_li"><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body> 
+</html>
