@@ -25,8 +25,14 @@ li{
 }
 
 a{
-    color: black;
+    font-style: normal;
     text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    background-color: black;
+    padding: 10px;
 }
 
 header
@@ -37,15 +43,28 @@ header
     display: flex;
     justify-content: right;
     align-items: center;
+    font-family:cursive;
 
 }
 
+#header{
+    font-family: 'Poiret One', cursive;
+    
+}
+
+#header span{
+    font-family: 'Poiret One', cursive;
+    font-style: bold;
+    color: yellow;
+}
+
 .messagebtn{
-    margin-right: 50px;
-    margin-left: 10px;
-    height: 35px;
-    width: 35px;
+    background-color: rgb(211, 211, 34);
+    padding: 5px;
     border-radius: 50%;
+    background-color: black;
+    margin-right: 100px;
+
 }
 .down-arrow{
     background-color: transparent;
@@ -55,6 +74,12 @@ header
 #blog{
     background-color: transparent;
     border: none;
+}
+
+#text_second span{
+    color: yellow;
+    background-color: black;
+    padding: 5px;
 }
 
 .main{
@@ -70,31 +95,40 @@ header
 
 h1{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poiret One', cursive;
     text-align: center;
     margin-bottom: 10px;
 }
+
+
 p{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-family: 'Poiret One', cursive;    text-align: center;
     margin-bottom: 10px;
 }
 
 .btns{
     margin-top: 25px;
+
 }
 button{
     padding: 8px 20px;
     margin: 7px 0;
     border: 2px solid white;
-    border-radius: 8px;
+    border-radius: 10px;
     background: none;
     color: white;
 }
 
 #contact_us_btn{
-    background-color: rgb(208, 208, 27);
+    border-radius: 15px;
+    border: none  ;
+    background-color: rgb(181, 181, 40);
+}
+
+#discover_now{
+    border-radius: 20px;
 }
 .header_line{
     width: 40%;
@@ -133,6 +167,7 @@ h4{
 }
 
 .leftside p{
+    font-family: 'Times New Roman', Times, serif;
     color: black;
 }
 
@@ -145,9 +180,10 @@ h4{
 }
 
 .services{
-    background:rgba(0, 0, 0, 0.889) url(./images/img-2.jpg);
-    background-blend-mode: darken;
+    background:rgba(0, 0, 0, 0.852) url(./images/img-2.jpg);
+    background-blend-mode:darken;
     background-size: cover;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,6 +209,12 @@ h4{
     flex-direction:column;
 }
 
+.servicebox img{
+    background-color: rgba(255, 255, 255, 0.148);
+    padding: 10px;
+    border-radius: 50%;
+}
+
 .header_text{
     margin-bottom: 50px;
 }
@@ -184,6 +226,8 @@ h3{
 }
 
 .orderservice_btn{
+    border: none;
+    border-radius: 20px;
     background-color: rgb(208, 208, 27);
 }
 
@@ -211,14 +255,27 @@ h3{
 
 .gallary{
     width: 100%;
-    height:85% ;
-    background-color: black;
+    height: 85%;
+
+}
+
+.gallary ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+.gallary ul li {
+    flex: 1 1 15rem;
+  min-height: 30vh;
+  max-height: calc(50vh - 0.5rem);
+  }
+.gallary img{
+    object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .achivements{
@@ -235,9 +292,19 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; 
 }
-
+.achivment_box img{
+    background-color: rgba(255, 255, 255, 0.338); 
+    border-radius: 50%;
+    padding: 20px;
+}
+#achivment_box3 h3{
+    color: yellow;
+}
+#achivment_box3 h1{
+    color: yellow;
+}
 .pricing_plans{
     width: 100%;
     height: 100vh;
@@ -253,13 +320,21 @@ h3{
 
 .textforpricing h1{
     color: black;
+    font-size: 50px;
 }
+.textforpricing  span{
+    color: yellow;
+    font-family: 'Poiret One', cursive;
+    
+}
+
 .textforpricing h6{
     color: black;
+    font-size: 10px;
+
 }
 .pricing_cards{
     height: 75%;
-    background-color: red;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -276,7 +351,15 @@ h3{
     border-radius: 10px;
     width:200px;
     height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
+}
+
+.button_in_pricing{
+    border: none;
+    background-color: rgb(205, 205, 35);
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .card h3{
@@ -285,10 +368,6 @@ h3{
 
 .card h6{
     color: black;
-}
-
-.card button{
-    background-color: yellow;
 }
 .about_us{
     width: 100%;
