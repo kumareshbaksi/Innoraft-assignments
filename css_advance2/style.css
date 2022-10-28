@@ -1,7 +1,12 @@
 *{
     padding: 0;
-    margin: 0;
+    margin: 0;  
     font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    margin: 0;
+    padding: 0;
 }
 
 ul{
@@ -143,6 +148,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .icon_with_text{
@@ -234,7 +240,6 @@ h3{
 .good_design{
     width: 100%;
     height: 900px;
-    background-color: blue;
     display: flex;
     flex-direction: column;
 }
@@ -242,40 +247,41 @@ h3{
 .text{
     width: 100%;
     height: 15%;
-    background-color: red;
+    
 }
 
 .text h2{
-    color: white;
+    color: black;
+    font-family: 'Poiret One', cursive;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.text p{
-    color: white;
+.text h2 span{
+    color: yellow;
+    font-family: 'Poiret One', cursive;
 }
 
-.gallary{
-    width: 100%;
-    height: 85%;
-
+.text h6{
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.gallary ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+#gallery{
+    margin-top: 20px;
 }
-.gallary ul li {
-    flex: 1 1 15rem;
-  min-height: 30vh;
-  max-height: calc(50vh - 0.5rem);
-  }
-.gallary img{
-    object-fit: cover;
-  width: 100%;
-  height: 100%;
+.gallery_btns{
+    margin-top: 20px;
+}
+
+#show_btn{
+    background-color: black;
+    padding: 10px;
+}
+
+.gallery_btns a{
+    color: rgb(163, 163, 44);
 }
 
 .achivements{
@@ -312,6 +318,7 @@ h3{
 
 .textforpricing{
     height: 25%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,6 +342,7 @@ h3{
 }
 .pricing_cards{
     height: 75%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -386,8 +394,15 @@ h3{
     height: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+
 }
+
+.btnss .next_btn{
+    background-color: rgb(167, 167, 36);
+    border: none;
+}
+
 
 .about_text h2{
     color: white;
@@ -398,11 +413,29 @@ h3{
 }
 
 .people{
-    width: 40%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: 30px;
+}
+
+.about_text{
+    display: flex;
+    flex-direction: row;
+}
+
+.people h6{
+    color: white;
+}
+
+.people p{
+    margin-top: 10px;
+}
+
+.text_area h2 span{
+    color: yellow;
 }
 
 #user{
@@ -432,10 +465,16 @@ h3{
     justify-content: left;
     flex-direction: column;
     margin-top: 20px;
+    margin-left: 110px;
+    margin-top: 50px;
 }
 
 .blog_post_text_area h2{
     color: black;
+    font-size: 50px;
+}
+#blog{
+    color: yellow;
 }
 .blog_post_text_area h6{
     color: black;
@@ -447,6 +486,53 @@ h3{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+
+}
+.cardforblog h4{
+    color: black;
+}
+.cardforblog p{
+    color: black;
+}
+.cardforblog button{
+    background-color: yellow;
+}
+
+.cardforblog img{
+    width: 100%;
+    height: 50%;
+    border-radius: 0;
+}
+
+.blog_post_text_area{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-top: 50px;
+}
+
+.blog_post_text_area h2{
+    color: black;
+    font-size: 50px;
+}
+#blog{
+    color: yellow;
+}
+.blog_post_text_area h6{
+    color: black;
+}
+.cardarea{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 .cardforblog h4{
     color: black;
@@ -464,19 +550,37 @@ h3{
     border-radius: 0;
 }
 .cardforblog{
-    width: 20%;
-    height: 75%;
+    width: 30%;
+    height: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: tomato;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    width:200px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 10px;
 }
-
+.cardforblog h4{
+    text-align: center;
+}
+.cardforblog button{
+    background-color: white;
+    color: black;
+    border:2px solid black ;
+}
+.cardforblog #middle{
+    border: none;
+    background-color: yellow;   
+}
 footer{
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: blue;
+    padding-bottom: 50px;
+    background-color: #2E2252;
 }
 
 .links{
@@ -489,6 +593,23 @@ footer{
     display: flex;
     flex-direction: column;
 }
+.links .company h2{
+    color: white;
+    margin-bottom: 10px;
+}
+.links .Quick_Links h2{
+    color: white;
+    margin-bottom: 10px;
+}
+.links .social h2{
+    color: white;
+    margin-bottom: 10px;
+}
+.links .company ul li a{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
 
 .links .Quick_Links ul{
     display: flex;
@@ -500,10 +621,43 @@ footer{
     flex-direction: column;
 }
 
+.links .social ul li a{
+    color: white;
+}
+
+
+.links .Quick_Links ul li a{
+    color: white;
+}
+
 .footer_end_text{
     display: flex;
     justify-content: center;
     align-items: center;
     align-items: center;
-    background-color: blue;
+    background-color: #2E2252;
+    color: white;
+}
+
+button{
+    cursor: pointer;
+}
+
+.search_bar h2{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.search_bar a{
+
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 0;
+}
+
+.email{
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 20px;
 }
