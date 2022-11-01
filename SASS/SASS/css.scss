@@ -1,0 +1,23 @@
+h1{
+    color: tomato;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+$bg_color: black;
+
+header{
+    width: 50vw + 50vw; // using operators
+    height: 100vh;
+    background-color: $bg_color; // using variables
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Operator we can use it here
+// Variables we can use it too
+
