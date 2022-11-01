@@ -13,11 +13,30 @@ header{
     width: 50vw + 50vw; // using operators
     height: 100vh;
     background-color: $bg_color; // using variables
+    @include flex;
+
+    // Nesting examples...
+    h1{
+        color: blue($color: #000000);
+    }
+    p{
+        color: aqua;
+    }
+
+}
+
+@mixin flex {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 // Operator we can use it here
 // Variables we can use it too
+// Nesting is possible in sass
+// Mixin is amazing
+// In mixin we can send the parameters too
+// We can seperate the variables in different file too but their names
+// sould start with _ 
 
